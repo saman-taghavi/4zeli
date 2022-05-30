@@ -12,11 +12,12 @@
     "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
     "precommit-lintfix": "echo 'Pre-commit Lint & Fix...' && exit 1",
-    "precommit-lint": "echo 'Pre-commit Linting ...'"
+    "precommit-lint": "echo 'Pre-commit Linting ...'",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lintfix "
+      "pre-commit": "yarn precommit-lintfix && yarn  lintfix && yarn precommit-lint && yarn  lint"
     }
   },
   "dependencies": {
