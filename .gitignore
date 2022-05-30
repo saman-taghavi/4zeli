@@ -90,4 +90,5 @@ sw.*
 *.swp
 
 .output
-pnpm-lock.yaml
+
+/pnpm-lock.yaml
