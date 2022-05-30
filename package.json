@@ -16,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn precommit-lintfix && yarn  lintfix && yarn precommit-lint && yarn  lint "
+      "pre-commit": "yarn lintfix "
     }
   },
   "dependencies": {
