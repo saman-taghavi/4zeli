@@ -15,10 +15,10 @@
     "precommit-lint": "echo 'Pre-commit Linting ...'"
   },
   "pre-commit": [
+    "lint",
     "precommit-lintfix",
     "lintfix",
-    "precommit-lint",
-    "lint"
+    "precommit-lint"
   ],
   "dependencies": {
     "@babel/core": "7.11.0",
