@@ -11,7 +11,7 @@
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
-    "precommit-lintfix": "echo 'Pre-commit Lint & Fix...'",
+    "precommit-lintfix": "echo 'Pre-commit Lint & Fix...' && exit 1",
     "precommit-lint": "echo 'Pre-commit Linting ...'"
   },
   "pre-commit": [
