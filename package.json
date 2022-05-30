@@ -3,14 +3,22 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: I SHOULD FAIL LOLOLOLOLOL \" && exit 1",
-    "foo": "echo \"fooo\" && exit 0",
-    "bar": "echo \"bar\" && exit 0"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "nuxi preview",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path   .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+    "precommit-lintfix": "echo 'Pre-commit Lint & Fix...' && exit 1",
+    "precommit-lint": "echo 'Pre-commit Linting ...'"
   },
   "pre-commit": [
-    "foo",
-    "bar",
-    "test"
+    "lint",
+    "precommit-lintfix",
+    "lintfix",
+    "precommit-lint"
   ],
   "dependencies": {
     "@babel/core": "7.11.0",
