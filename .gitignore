@@ -92,3 +92,4 @@ sw.*
 .output
 
 /pnpm-lock.yaml
+yarn.lock
