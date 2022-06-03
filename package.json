@@ -11,8 +11,6 @@
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
     "lint:fix": "prettier --write --list-different . && yarn lint:js --fix",
-    "precommit:lint:fix": "echo 'Pre-commit Lint & Fix...' && exit 1",
-    "precommit:lint": "echo 'Pre-commit Linting ...'",
     "prepare": "husky install"
   },
   "dependencies": {
