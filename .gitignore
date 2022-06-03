@@ -88,3 +88,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+.output
+
+/pnpm-lock.yaml
+yarn.lock
